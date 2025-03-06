@@ -1,7 +1,7 @@
 /*
     Student Name: Ivy N. Goldsmith
 	File Name: styles.css
-	Today's Date: 2/20/2025
+	Today's Date: 3/5/2025
 */
 
 /* CSS Reset */
@@ -11,9 +11,11 @@ header,
 nav,
 main,
 footer,
-img,
 h1,
-h3 {
+div,
+img,
+ul,
+main img {
     margin: 0;
     padding: 0;
     border: 0;
@@ -33,15 +35,22 @@ img {
 /* Style rule for header */
 
 header {
-    width: 25%;
-    float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+header img {
+    margin: 0 auto;
+    height: 100px;
 }
 
 /* Style rule for footer */
 
 footer p {
     font-size: 0.75em;
-    font-family: "proxima-nova", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     text-align: center;
     line-height: 1.75;
@@ -62,36 +71,28 @@ footer p a {
 
 nav {
     background-color: #8ebcc4;
-}
-
-nav img {
-    float: left;
-    max-height: 6em;
+    padding: 1%;
+    margin-bottom: 1%;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
+    list-style-type: none;
     text-align: center;
 }
 
 nav li {
-    display: inline-block;
-    color: #fff;
-    font-family: "proxima-nova", sans-serif;
-    font-size: 1em;
+    display: block;
+    font-size: 1.25em;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
-    margin: 0;
+    border-top: 0.5px;
+    border-color: #fff;
 }
 
 nav li a {
     display: block;
     color: #fff;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    line-height: 2em;
+    padding: 0.5em 1em;
     text-decoration: none;
 }
 
@@ -99,25 +100,57 @@ nav li a {
 
 main {
     padding: 2%;
-    font-family: "proxima-nova", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 main p {
     font-size: 1.25em;
+    font-family: "Roboto", sans-serif;
 }
 
 main h3 {
     padding-top: 2%;
+    font-family: "Roboto", sans-serif;
 }
 
 main a {
     text-decoration: none;
     color: #8ebcc4;
+    font-family: "Roboto", sans-serif;
+}
+
+#main_div {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.round {
+    border-radius: 8px;
+}
+
+.tel-link {
+    background-color: #74a1a9;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tel-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
 }
 
 /* Style rules for contact page */
 
 #contact {
+    text-align: center;
+}
+
+#contact_div {
     text-align: center;
 }
 
@@ -131,4 +164,19 @@ main a {
 
 .traditional {
     font-weight: bold;
+}
+
+/* Show mobile class, hide tablet-desktop class */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
