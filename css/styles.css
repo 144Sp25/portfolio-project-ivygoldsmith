@@ -162,8 +162,24 @@ main a {
 
 /* Style rules for traditional media page */
 
-.traditional {
-    font-weight: bold;
+.sketch {
+    font-size: medium;
+}
+
+.charcoal {
+    font-size: medium;
+}
+
+.paint {
+    font-size: medium;
+}
+
+.metalsmithing {
+    font-size: medium;
+}
+
+.woodworking {
+    font-size: medium;
 }
 
 /* Show mobile class, hide tablet-desktop class */
@@ -179,4 +195,115 @@ main a {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+}
+
+/* Media Query for Tablet Viewport */
+
+@media screen and (min-width: 630px), print {
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet Viewport: Style rule for header */
+    header {
+        position: static;
+        padding-bottom: 2%;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+
+    .tel-num {
+        font-size: 1.25em;
+    }
+
+    .map {
+        width: 600px;
+        height: 450px;
+    }
+}
+
+/*Media Query for Desktop Viewport */
+
+@media screen and (min-width: 1015px), print {
+    /* Desktop Viewport: Style rule for header */
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0%;
+    }
+
+    /*Desktop Viewport: style rules for nav area */
+    nav {
+        float: right;
+        width: 70%;
+        margin: 1em 0 1em 0;
+        background: #fff;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+        color: #000;
+    }
+
+    nav li a:hover {
+        color: #fff;
+        background-color: #000;
+    }
+
+    /*Desktop Viewport: Style Rules for main content */
+
+    main {
+        clear: left;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Media Query for Large Desktop Viewports */
+
+@media screen and (min-width: 1921px), print {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Media Query for Print */
+
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
 }
